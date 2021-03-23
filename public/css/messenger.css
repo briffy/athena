@@ -1,0 +1,398 @@
+body {
+    background-color: black;
+    background-image: radial-gradient(
+      rgba(173, 0, 135, 0.363), black 120%
+    );
+    height: 100vh;
+    margin: 0;
+    padding: 1vh 2rem;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+}
+
+
+.clear {
+  clear: both;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+}
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+#wrapper {
+    font-size: 0.6em;
+    margin: 0px auto; 
+}
+
+@media only screen and (max-width: 43em) {
+  body {
+    overflow: auto;
+  }
+
+  #wrapper nav {
+    display: none;
+  }
+  #wrapper main {
+    width: 100%;
+  }
+  #wrapper #recipient_profile {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 43em) {
+  body {
+      overflow: hidden;
+  }
+
+  #wrapper nav {
+    width: 24%;
+  }
+
+  #wrapper main {
+    width: 49%;
+  }
+
+  #wrapper #recipient_profile {
+    width: 25%;
+  }
+} 
+
+
+#wrapper nav {
+  max-width: 300px;
+  float: left;
+  margin: 0px 1% 0px 0px;
+}
+
+#wrapper nav section {
+  width: 100%;
+  float: left;
+  margin: 0 0 20px 0;
+  border: 1px solid black;
+}
+
+#wrapper nav #user_profile #avatar_container img {
+  width: 100%;
+  height: 300px;
+}
+
+#wrapper nav section ul li {
+  height: 35px;
+  width: 100%;
+}
+
+#wrapper nav section ul li .contact_request_name {
+  height: 25px;
+  width: 65%;
+  padding: 10px 0 0 5%;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  float: left;
+}
+
+#wrapper nav section ul li .contact_request_actions {
+  height: 15px;
+  width: 28%;
+  margin: 10px 2% 10px 0;
+  float: left;
+  text-align: right;
+  border-radius: 1%;
+}
+
+#wrapper nav section ul li .contact_request_actions input {
+  width: 15px;
+  margin: 0 0 0 5px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: none;
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#wrapper nav section ul li .contact_request_actions input:hover {
+  cursor: pointer;
+}
+
+#wrapper nav section ul li .contact_request_actions #contact_accept {
+  color: rgba(50, 177, 0, 0.719);
+}
+
+#wrapper nav section ul li .contact_request_actions #contact_deny {
+  color:rgba(243, 207, 0, 0.678);
+}
+
+#wrapper nav section ul li .contact_request_actions #contact_block {
+  color:rgba(173, 0, 0, 0.651);
+}
+
+#wrapper nav #contacts #contacts_list {
+  max-height: 175px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: black grey;
+}
+
+#wrapper nav #contacts #contacts_list::-webkit-scrollbar {
+  width: 4px;
+}
+
+#wrapper nav #contacts #contacts_list::-webkit-scrollbar-track {
+  background: grey;
+}
+
+#wrapper nav #contacts #contacts_list::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+#wrapper nav #contacts #contacts_requests_list {
+  max-height: 175px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: black grey;
+}
+
+#wrapper nav #contacts #contacts_requests_list::-webkit-scrollbar {
+  width: 4px;
+}
+
+#wrapper nav #contacts #contacts_requests_list::-webkit-scrollbar-track {
+  background: grey;
+}
+
+#wrapper nav #contacts #contacts_requests_list::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+#wrapper nav #contacts ul li .contact_avatar {
+  height: 100%;
+  width: 25%;
+  min-width: 48px;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+#wrapper nav #add_contact input {
+  width: 95%;
+  padding: 0 0 0 5%;
+  height: 35px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+}
+
+#wrapper nav #contacts ul li a {
+  height: 35px;
+  width: 75%;
+  float: left;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#wrapper nav #contacts ul li a .contact_name {
+  height: 25px;
+  width: 85%;
+  padding: 10px 0 0 5%;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  float: left;
+}
+
+#wrapper nav #contacts ul li a .notification_bubble {
+  height: 15px;
+  width: 8%;
+  margin: 10px 2% 10px 0;
+  float: left;
+  text-align: center;
+  background-color: rgba(173, 0, 0, 0.651);
+  border-radius: 1%;
+}
+
+#wrapper nav #contacts ul #active_contact {
+  background-color:rgba(243, 207, 0, 0.678);
+  height: 25px;
+  width: 95%;
+  padding: 10px 0 0 5%;
+}
+
+#wrapper nav #contacts ul li a:hover {
+  background-color: rgba(50, 177, 0, 0.719);
+}
+
+#wrapper nav #contacts ul li.selectedContact {
+  background-color: rgba(128, 62, 0, 0.4);
+}
+
+#wrapper nav section h1 {
+  height: 30px;
+  width: 97%;
+  padding: 10px 0 0 3%;
+  background-color: #000000;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#wrapper main {
+  float: left;
+  margin: 0px 1% 0px 0px;
+}
+
+#wrapper #recipient_profile {
+  float: left;
+  margin: 0 0 20px 0;
+  max-width: 300px;
+}
+
+#wrapper #recipient_profile h1 {
+  height: 30px;
+  width: 97%;
+  padding: 10px 0 0 3%;
+  background-color: #000000;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#wrapper #recipient_profile #files_container {
+  border: 1px solid black;
+}
+
+#wrapper #recipient_profile #avatar_container {
+  margin: 0 0 20px 0;
+}
+
+#wrapper #recipient_profile #avatar_container img {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+}
+
+#wrapper main #messages {
+  height: 93vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: black grey;
+}
+
+#wrapper main #messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+#wrapper main #messages::-webkit-scrollbar-track {
+  background: grey;
+}
+
+#wrapper main #messages::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+#wrapper main #messages li {
+  width: 98%;
+  padding: 10px 1%;
+  margin: 5px 0px 0px;
+}
+
+.recipient {
+  text-align: left;
+  background-color: rgba(255, 0, 179, 0.308);
+}
+
+.sender {
+  text-align: right;
+  background-color: rgba(49, 99, 2, 0.7);
+}
+
+#wrapper main #messageInput {
+  width: 100%;
+  padding: 0;
+  margin: 1vh 0 0 0;
+  height: 3vh;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#registerPage {
+  padding: 20px;
+  width: 770px;
+  margin: 300px auto;
+  box-shadow: 1px 1px 2px 2px rgba(231, 216, 2, 0.5);
+}
+
+#registerPage h1 {
+  font-size: 1.1em;
+}
+
+#registerPage p {
+  font-size: 0.7em;
+  text-align: right;
+}
+
+#registerPage p sup a {
+text-shadow: none;
+color: #0000ff;
+}
+
+#registerPage .inputGroup {
+  width: 100%;
+  float: left;
+}
+
+#registerPage .inputGroup label {
+  width: 100%;
+  padding: 10px 0 0 0;
+  float: left;
+  font-size: 0.8em;
+}
+
+#notification_request {
+  width: 90%;
+  padding: 10px 5% 10px 5%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 1.2em;
+}
+
+#notification_request #notification_request_label {
+  float: left;
+  width: 70%;
+}
+
+#notification_request #notification_request_button {
+  float: left;
+  width: 30%;
+}
+
+
+#notification_request button {
+  width: 100px;
+  height: 40px;
+  font-size: 0.8em;
+  background: rgba(0, 117, 117, 0.37);
+  box-shadow: none;
+  color: #ffffff;
+  font-weight: bold;
+  border: 5px solid rgba(0, 0, 0, 0.85);
+  text-align: center;
+}

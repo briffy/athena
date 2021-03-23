@@ -1,0 +1,175 @@
+body {
+    background-color: black;
+    background-image: radial-gradient(
+      rgba(173, 0, 135, 0.363), black 120%
+    );
+    height: 98vh;
+    margin: 0;
+    padding: 1vh 2rem;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    overflow: hidden;
+}
+
+
+.clear {
+  clear: both;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+}
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+#contacts {
+  width: 19%;
+  height: 84%;
+  margin: 0 1% 1% 0;
+  float: left;
+  overflow: auto;
+}
+
+#contacts #contacts_list {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+#contacts  #contacts_list li {
+  width: 100%;
+  height: 192px;
+  margin: 0 0 10% 0;
+  overflow: auto;
+  float: left;
+}
+
+#contacts #contacts_list li a {
+  height: 100%;
+  width: 100%;
+  float: left;
+  display: block;
+  background-size: 100% 100%;
+}
+
+#contacts #contacts_list li a .contact_username {
+  width: 100%;
+  height: 35px;
+  font-size: 1.6em;
+  text-decoration: none;
+  text-shadow: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+main {
+  width: 80%;
+  height: 84%;
+  margin: 0 0 1% 0;
+  float: left;
+}
+
+main #messages {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: scroll;
+}
+
+main #messages li {
+  width: 98%;
+  padding: 10px 1%;
+  margin: 5px 0px 0px;
+}
+
+#message_form_container {
+  width: 100%;
+  height: 15%;
+  float: left;
+}
+
+#message_form_container #message_form textarea {
+  width: 100%;
+  height: 100%;
+}
+
+#message_form_container #message_form {
+  width: 100%;
+  height: 100%;
+}
+
+.sender {
+  text-align: right;
+  background-color: rgba(49, 99, 2, 0.7);
+}
+
+.recipient {
+  text-align: left;
+  background-color: rgba(255, 0, 179, 0.308);
+}
+
+input[type='text'],
+input[type='number'],
+select:focus,
+textarea {
+  font-size: 3em;
+}
+
+.notification_bubble {
+  height: 25%;
+  width: 25%;
+  margin: 10px 2% 10px 0;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(173, 0, 0, 0.651);
+  border-radius: 1%;
+  font-size: 2em;
+  color: #ffffff;
+}
+
+#notification_request {
+  width: 90%;
+  padding: 10px 5% 0 5%;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 2em;
+}
+
+#notification_request #notification_request_label {
+  float: left;
+  width: 70%;
+}
+
+#notification_request #notification_request_button {
+  float: left;
+  width: 30%;
+}
+
+
+#notification_request button {
+  width: 240px;
+  height: 90px;
+  font-size: 1.2em;
+  background: rgba(0, 117, 117, 0.37);
+  box-shadow: none;
+  color: #ffffff;
+  font-weight: bold;
+  border: 5px solid rgba(0, 0, 0, 0.85);
+  text-align: center;
+}

@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    background-image: radial-gradient(
+      rgba(173, 0, 135, 0.363), black 120%
+    );
+    height: 98vh;
+    margin: 0;
+    padding: 1vh 2rem;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    overflow: hidden;
+}
+
+
+.clear {
+  clear: both;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+}
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+main {
+    width: 100%;
+    height: 98%;
+    padding: 2% 0 0 0;
+    float: left;
+}
+
+main h1 {
+    width: 100%;
+    height: 5%;
+    font-size: 2.2em;
+}
+
+main form {
+    width: 98%;
+    padding: 0 1%;
+    height: 95%;
+    float: left;
+}
+
+main form label {
+    margin: 0 0 1% 0;
+    font-size: 1.6em;
+    width: 100%;
+    float: left;
+}
+
+main form input[type=text], main form input[type=password] {
+    width: 100%;
+    margin: 0 0 5% 0;
+    float: left;
+    font-size: 1.6em;
+}
+
+main form input[type=submit] {
+    width: 25%;
+    height: 120px;
+    margin: 0 0 1% 0;
+    margin: 0 auto;
+    font-size: 1.6em;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    color: #ffffff;
+    font-weight: bold;
+    border: 5px solid rgba(0, 0, 0, 0.85);
+}
+
+#register_link {
+    height: 85px;
+    padding: 15px 0 0 0;
+    width: 300px;
+    position: fixed;
+    bottom: 2%;
+    right: 4%;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 2.6em;
+    display: block;
+    background: rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+    border: 5px solid rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+    text-align: center;
+}
